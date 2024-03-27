@@ -1,0 +1,309 @@
+name: Customers
+description: 'APIs for managing Customers'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/customers
+    metadata:
+      groupName: Customers
+      groupDescription: 'APIs for managing Customers'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      empresa:
+        name: empresa
+        description: 'Must be between -9999 and 9999.'
+        required: true
+        example: -9998
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      codigo:
+        name: codigo
+        description: 'Must be between -99999999999999 and 99999999999999.'
+        required: true
+        example: -99999999999999
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      razao_social:
+        name: razao_social
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: hyr
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      tipo:
+        name: tipo
+        description: ''
+        required: true
+        example: PJ
+        type: string
+        enumValues:
+          - PJ
+          - PF
+        exampleWasSpecified: false
+        custom: []
+      cpf_cnpj:
+        name: cpf_cnpj
+        description: 'Must not be greater than 14 characters.'
+        required: true
+        example: gstqdmqqwvgg
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      empresa: -9998
+      codigo: -99999999999999
+      razao_social: hyr
+      tipo: PJ
+      cpf_cnpj: gstqdmqqwvgg
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/customers
+    metadata:
+      groupName: Customers
+      groupDescription: 'APIs for managing Customers'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"empresa":"9138","codigo":"5131","razao_social":"VRUoYEQGKj","tipo":"PJ","cpf_cnpj":"47335323450258","empresa_data":{"recnum":16,"codigo":"9138","empresa":"4671","sigla":"SVfmMweJrQ","razao_social":"XzOiyMdHqz","created_at":"2024-03-27T19:23:26.000000Z","updated_at":"2024-03-27T19:23:26.000000Z"}},{"empresa":"4056","codigo":"6597","razao_social":"CERSsRLtJd","tipo":"PF","cpf_cnpj":"76386939115277","empresa_data":{"recnum":17,"codigo":"4056","empresa":"8827","sigla":"yqpOakhMwF","razao_social":"KDkUPvFfDy","created_at":"2024-03-27T19:23:26.000000Z","updated_at":"2024-03-27T19:23:26.000000Z"}},{"empresa":"8004","codigo":"6368","razao_social":"wRXYthuIxt","tipo":"PJ","cpf_cnpj":"19963091971543","empresa_data":{"recnum":18,"codigo":"8004","empresa":"411","sigla":"wlXxRqFimf","razao_social":"fiEjGEReYb","created_at":"2024-03-27T19:23:26.000000Z","updated_at":"2024-03-27T19:23:26.000000Z"}},{"empresa":"1912","codigo":"5089","razao_social":"ePSxRQdirm","tipo":"PJ","cpf_cnpj":"22559716940738","empresa_data":{"recnum":19,"codigo":"1912","empresa":"277","sigla":"APJPDdWMZJ","razao_social":"aLyEOMCzRk","created_at":"2024-03-27T19:23:26.000000Z","updated_at":"2024-03-27T19:23:26.000000Z"}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/customers/{id}'
+    metadata:
+      groupName: Customers
+      groupDescription: 'APIs for managing Customers'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the customer.'
+        required: true
+        example: 3
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 3
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/customers/{id}'
+    metadata:
+      groupName: Customers
+      groupDescription: 'APIs for managing Customers'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the customer.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 17
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      empresa:
+        name: empresa
+        description: 'Must be between -9999 and 9999.'
+        required: true
+        example: -9999
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      codigo:
+        name: codigo
+        description: 'Must be between -99999999999999 and 99999999999999.'
+        required: true
+        example: -99999999999999
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      razao_social:
+        name: razao_social
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: gtjxis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      tipo:
+        name: tipo
+        description: ''
+        required: true
+        example: PF
+        type: string
+        enumValues:
+          - PJ
+          - PF
+        exampleWasSpecified: false
+        custom: []
+      cpf_cnpj:
+        name: cpf_cnpj
+        description: 'Must not be greater than 14 characters.'
+        required: true
+        example: byccipdsjh
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      empresa: -9999
+      codigo: -99999999999999
+      razao_social: gtjxis
+      tipo: PF
+      cpf_cnpj: byccipdsjh
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/customers/{id}'
+    metadata:
+      groupName: Customers
+      groupDescription: 'APIs for managing Customers'
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the customer.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,605 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/companies:
+    post:
+      summary: ''
+      operationId: postApiCompanies
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                codigo:
+                  type: number
+                  description: ''
+                  example: 170718432.93161
+                empresa:
+                  type: number
+                  description: ''
+                  example: 1579.616735865
+                sigla:
+                  type: string
+                  description: 'Must not be greater than 40 characters.'
+                  example: jafg
+                razao_social:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: effgl
+              required:
+                - codigo
+                - empresa
+                - sigla
+                - razao_social
+      security: []
+    get:
+      summary: ''
+      operationId: getApiCompanies
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      codigo: '6737'
+                      empresa: '3653'
+                      sigla: igMOXrUOnZ
+                      razao_social: SviVrHJdpw
+                    -
+                      codigo: '6174'
+                      empresa: '8765'
+                      sigla: MlgsNVIjAR
+                      razao_social: NZKzlCnMNy
+                    -
+                      codigo: '3817'
+                      empresa: '1734'
+                      sigla: BHDxDjiyUa
+                      razao_social: vfhwhGWuPE
+                    -
+                      codigo: '7964'
+                      empresa: '8035'
+                      sigla: QRDVtCtzMJ
+                      razao_social: FRQdjaxOwv
+                    -
+                      codigo: '4356'
+                      empresa: '3882'
+                      sigla: llxfxcRPXO
+                      razao_social: FSHqsunlRr
+                    -
+                      codigo: '9138'
+                      empresa: '4671'
+                      sigla: SVfmMweJrQ
+                      razao_social: XzOiyMdHqz
+                    -
+                      codigo: '4056'
+                      empresa: '8827'
+                      sigla: yqpOakhMwF
+                      razao_social: KDkUPvFfDy
+                    -
+                      codigo: '8004'
+                      empresa: '411'
+                      sigla: wlXxRqFimf
+                      razao_social: fiEjGEReYb
+                    -
+                      codigo: '1912'
+                      empresa: '277'
+                      sigla: APJPDdWMZJ
+                      razao_social: aLyEOMCzRk
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        codigo: '6737'
+                        empresa: '3653'
+                        sigla: igMOXrUOnZ
+                        razao_social: SviVrHJdpw
+                      -
+                        codigo: '6174'
+                        empresa: '8765'
+                        sigla: MlgsNVIjAR
+                        razao_social: NZKzlCnMNy
+                      -
+                        codigo: '3817'
+                        empresa: '1734'
+                        sigla: BHDxDjiyUa
+                        razao_social: vfhwhGWuPE
+                      -
+                        codigo: '7964'
+                        empresa: '8035'
+                        sigla: QRDVtCtzMJ
+                        razao_social: FRQdjaxOwv
+                      -
+                        codigo: '4356'
+                        empresa: '3882'
+                        sigla: llxfxcRPXO
+                        razao_social: FSHqsunlRr
+                      -
+                        codigo: '9138'
+                        empresa: '4671'
+                        sigla: SVfmMweJrQ
+                        razao_social: XzOiyMdHqz
+                      -
+                        codigo: '4056'
+                        empresa: '8827'
+                        sigla: yqpOakhMwF
+                        razao_social: KDkUPvFfDy
+                      -
+                        codigo: '8004'
+                        empresa: '411'
+                        sigla: wlXxRqFimf
+                        razao_social: fiEjGEReYb
+                      -
+                        codigo: '1912'
+                        empresa: '277'
+                        sigla: APJPDdWMZJ
+                        razao_social: aLyEOMCzRk
+                    items:
+                      type: object
+                      properties:
+                        codigo:
+                          type: string
+                          example: '6737'
+                        empresa:
+                          type: string
+                          example: '3653'
+                        sigla:
+                          type: string
+                          example: igMOXrUOnZ
+                        razao_social:
+                          type: string
+                          example: SviVrHJdpw
+      tags:
+        - Companies
+      security: []
+  '/api/companies/{id}':
+    get:
+      summary: ''
+      operationId: getApiCompaniesId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Companies
+      security: []
+    put:
+      summary: ''
+      operationId: putApiCompaniesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                codigo:
+                  type: number
+                  description: ''
+                  example: 3109.48831969
+                empresa:
+                  type: number
+                  description: 'Must be between -9999 and 9999.'
+                  example: -9999
+                sigla:
+                  type: string
+                  description: 'Must not be greater than 40 characters.'
+                  example: gdrcbsibkjcoaxrkckyoiob
+                razao_social:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: agxoiwuhkqezimiyxapacnx
+              required:
+                - codigo
+                - empresa
+                - sigla
+                - razao_social
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCompaniesId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Companies
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the company.'
+        example: 10
+        required: true
+        schema:
+          type: integer
+  /api/customers:
+    post:
+      summary: ''
+      operationId: postApiCustomers
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Customers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                empresa:
+                  type: number
+                  description: 'Must be between -9999 and 9999.'
+                  example: -9998
+                codigo:
+                  type: number
+                  description: 'Must be between -99999999999999 and 99999999999999.'
+                  example: -99999999999999
+                razao_social:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hyr
+                tipo:
+                  type: string
+                  description: ''
+                  example: PJ
+                  enum:
+                    - PJ
+                    - PF
+                cpf_cnpj:
+                  type: string
+                  description: 'Must not be greater than 14 characters.'
+                  example: gstqdmqqwvgg
+              required:
+                - empresa
+                - codigo
+                - razao_social
+                - tipo
+                - cpf_cnpj
+      security: []
+    get:
+      summary: ''
+      operationId: getApiCustomers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      empresa: '9138'
+                      codigo: '5131'
+                      razao_social: VRUoYEQGKj
+                      tipo: PJ
+                      cpf_cnpj: '47335323450258'
+                      empresa_data:
+                        recnum: 16
+                        codigo: '9138'
+                        empresa: '4671'
+                        sigla: SVfmMweJrQ
+                        razao_social: XzOiyMdHqz
+                        created_at: '2024-03-27T19:23:26.000000Z'
+                        updated_at: '2024-03-27T19:23:26.000000Z'
+                    -
+                      empresa: '4056'
+                      codigo: '6597'
+                      razao_social: CERSsRLtJd
+                      tipo: PF
+                      cpf_cnpj: '76386939115277'
+                      empresa_data:
+                        recnum: 17
+                        codigo: '4056'
+                        empresa: '8827'
+                        sigla: yqpOakhMwF
+                        razao_social: KDkUPvFfDy
+                        created_at: '2024-03-27T19:23:26.000000Z'
+                        updated_at: '2024-03-27T19:23:26.000000Z'
+                    -
+                      empresa: '8004'
+                      codigo: '6368'
+                      razao_social: wRXYthuIxt
+                      tipo: PJ
+                      cpf_cnpj: '19963091971543'
+                      empresa_data:
+                        recnum: 18
+                        codigo: '8004'
+                        empresa: '411'
+                        sigla: wlXxRqFimf
+                        razao_social: fiEjGEReYb
+                        created_at: '2024-03-27T19:23:26.000000Z'
+                        updated_at: '2024-03-27T19:23:26.000000Z'
+                    -
+                      empresa: '1912'
+                      codigo: '5089'
+                      razao_social: ePSxRQdirm
+                      tipo: PJ
+                      cpf_cnpj: '22559716940738'
+                      empresa_data:
+                        recnum: 19
+                        codigo: '1912'
+                        empresa: '277'
+                        sigla: APJPDdWMZJ
+                        razao_social: aLyEOMCzRk
+                        created_at: '2024-03-27T19:23:26.000000Z'
+                        updated_at: '2024-03-27T19:23:26.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        empresa: '9138'
+                        codigo: '5131'
+                        razao_social: VRUoYEQGKj
+                        tipo: PJ
+                        cpf_cnpj: '47335323450258'
+                        empresa_data:
+                          recnum: 16
+                          codigo: '9138'
+                          empresa: '4671'
+                          sigla: SVfmMweJrQ
+                          razao_social: XzOiyMdHqz
+                          created_at: '2024-03-27T19:23:26.000000Z'
+                          updated_at: '2024-03-27T19:23:26.000000Z'
+                      -
+                        empresa: '4056'
+                        codigo: '6597'
+                        razao_social: CERSsRLtJd
+                        tipo: PF
+                        cpf_cnpj: '76386939115277'
+                        empresa_data:
+                          recnum: 17
+                          codigo: '4056'
+                          empresa: '8827'
+                          sigla: yqpOakhMwF
+                          razao_social: KDkUPvFfDy
+                          created_at: '2024-03-27T19:23:26.000000Z'
+                          updated_at: '2024-03-27T19:23:26.000000Z'
+                      -
+                        empresa: '8004'
+                        codigo: '6368'
+                        razao_social: wRXYthuIxt
+                        tipo: PJ
+                        cpf_cnpj: '19963091971543'
+                        empresa_data:
+                          recnum: 18
+                          codigo: '8004'
+                          empresa: '411'
+                          sigla: wlXxRqFimf
+                          razao_social: fiEjGEReYb
+                          created_at: '2024-03-27T19:23:26.000000Z'
+                          updated_at: '2024-03-27T19:23:26.000000Z'
+                      -
+                        empresa: '1912'
+                        codigo: '5089'
+                        razao_social: ePSxRQdirm
+                        tipo: PJ
+                        cpf_cnpj: '22559716940738'
+                        empresa_data:
+                          recnum: 19
+                          codigo: '1912'
+                          empresa: '277'
+                          sigla: APJPDdWMZJ
+                          razao_social: aLyEOMCzRk
+                          created_at: '2024-03-27T19:23:26.000000Z'
+                          updated_at: '2024-03-27T19:23:26.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        empresa:
+                          type: string
+                          example: '9138'
+                        codigo:
+                          type: string
+                          example: '5131'
+                        razao_social:
+                          type: string
+                          example: VRUoYEQGKj
+                        tipo:
+                          type: string
+                          example: PJ
+                        cpf_cnpj:
+                          type: string
+                          example: '47335323450258'
+                        empresa_data:
+                          type: object
+                          properties:
+                            recnum:
+                              type: integer
+                              example: 16
+                            codigo:
+                              type: string
+                              example: '9138'
+                            empresa:
+                              type: string
+                              example: '4671'
+                            sigla:
+                              type: string
+                              example: SVfmMweJrQ
+                            razao_social:
+                              type: string
+                              example: XzOiyMdHqz
+                            created_at:
+                              type: string
+                              example: '2024-03-27T19:23:26.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-03-27T19:23:26.000000Z'
+      tags:
+        - Customers
+      security: []
+  '/api/customers/{id}':
+    get:
+      summary: ''
+      operationId: getApiCustomersId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Customers
+      security: []
+    put:
+      summary: ''
+      operationId: putApiCustomersId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Customers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                empresa:
+                  type: number
+                  description: 'Must be between -9999 and 9999.'
+                  example: -9999
+                codigo:
+                  type: number
+                  description: 'Must be between -99999999999999 and 99999999999999.'
+                  example: -99999999999999
+                razao_social:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gtjxis
+                tipo:
+                  type: string
+                  description: ''
+                  example: PF
+                  enum:
+                    - PJ
+                    - PF
+                cpf_cnpj:
+                  type: string
+                  description: 'Must not be greater than 14 characters.'
+                  example: byccipdsjh
+              required:
+                - empresa
+                - codigo
+                - razao_social
+                - tipo
+                - cpf_cnpj
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiCustomersId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Customers
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the customer.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/test:
+    get:
+      summary: ''
+      operationId: getApiTest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Companies
+    description: 'APIs for managing Companies'
+  -
+    name: Customers
+    description: 'APIs for managing Customers'
+  -
+    name: Endpoints
+    description: ''

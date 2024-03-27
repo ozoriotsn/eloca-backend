@@ -1,0 +1,32 @@
+models:
+  Customer:
+    recnum: bigInteger unique autoIncrement
+    empresa: decimal:4,0 codigo foreign primary
+    codigo: decimal:14,0 primary
+    raza_social: string:255
+    tipo: enum:PJ,PF
+    cpf_cnpj: string:14
+
+controllers:
+  Customer:
+    index:
+      query: all
+      resource: paginate:customers
+    show:
+      query: where:recnum
+      resource: find:customers
+    store:
+      validate: recnum,empresa,codigo,raza_social,tipo,cpf_cnpj
+      save: customer
+      resource: customers
+    update:
+      validate: recnum,empresa,codigo,raza_social,tipo,cpf_cnpj
+      update: ccustomer
+      resource: customers
+    destroy:
+      query: where:recnum
+      delete: customer
+      resource: find:customers
+
+
+seeders: Customer

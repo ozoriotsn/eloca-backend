@@ -1,0 +1,31 @@
+models:
+  Company:
+    recnum: bigInteger unique autoIncrement
+    codigo: decimal:4,0 primary
+    empresa: decimal:4,0
+    sigla: string:40
+    raza_social: string:255
+
+controllers:
+  Company:
+    index:
+      query: all
+      resource: paginate:companies
+    show:
+      query: where:recnum
+      resource: find:companies
+    store:
+      validate: recnum,empresa,sigla,raza_social
+      save: company
+      resource: companies
+    update:
+      validate: recnum,empresa,sigla,raza_social
+      update: company
+      resource: companies
+    destroy:
+      query: where:recnum
+      delete: company
+      resource: find:companies
+
+
+seeders: Company

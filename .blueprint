@@ -1,0 +1,12 @@
+created:
+    - app/Http/Controllers/CustomerController.php
+    - database/factories/CustomerFactory.php
+    - database/migrations/2024_03_26_185247_create_customers_table.php
+    - app/Models/Customer.php
+    - database/seeders/CustomerSeederSeeder.php
+    - tests/Feature/Http/Controllers/CustomerControllerTest.php
+updated:
+    - routes/web.php
+models:
+    Company: { recnum: 'bigInteger unique autoIncrement primary', codigo: 'decimal:4,0', empresa: 'decimal:4,0', sigla: 'string:40', raza_social: 'string:255' }
+    Customer: { recnum: 'bigInteger unique autoIncrement', empresa: 'decimal:4,0 codigo foreign primary', codigo: 'decimal:14,0 primary', raza_social: 'string:255', tipo: 'enum:PJ,PF', cpf_cnpj: 'string:14' }
